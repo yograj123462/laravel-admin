@@ -3,7 +3,11 @@
 @endphp
 <div class="col-md-4">
     <div class="product-box">
-        <figure><img src="{{ $imgurl }}" alt="{{ $item->image_alt ?? $item->title }}"></figure>
+        <figure>
+            <a href="{{ route('products.details', $item->slug) }}">
+                <img src="{{ $imgurl }}" alt="{{ $item->image_alt ?? $item->title }}">
+            </a>
+        </figure>
         <div class="product-btns">
             <x-frontend.add-to-cart :cartQty="$item->cart_qty" :product="$item" :isSingle="false" />
             <x-frontend.add-to-wishlist :product="$item" :isSingle="false" />
@@ -16,7 +20,7 @@
         <h4>
             <a href="{{ route('products.details', $item->slug) }}" class="href">{{ $item->title }}</a>
         </h4>
-        <x-frontend.price :item="$item"/>
+        <x-frontend.price :item="$item" />
         <div class="product-rating">
             <div class="rating-stars">
                 <i class="fa fa-star"></i>
