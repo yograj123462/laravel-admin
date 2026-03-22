@@ -41,7 +41,16 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">Profile Image</label>
-                                        <input type="file" id="profile_image" name="profile_image" class="form-control">
+
+                                        <div class="custom-file-upload">
+                                            <input type="file" id="profile_image" name="profile_image">
+                                            
+                                            <label for="profile_image" class="upload-box">
+                                                <span class="upload-icon">📁</span>
+                                                <span class="upload-text">Click to upload image</span>
+                                                <span class="file-name">No file chosen</span>
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label d-block">Account Status</label>
@@ -54,7 +63,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary-custom">
+                                <button type="submit" class="btn mybtn">
                                     Update Info
                                 </button>
                             </form>
